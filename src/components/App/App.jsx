@@ -9,6 +9,7 @@ import Supported from '../Supported/Supported';
 import Comments from '../Comments/Comments'
 import Review from '../Review/Review'
 import Header from '../Header/Header'
+import Success from '../Success/Success';
 
 
 
@@ -38,6 +39,10 @@ function App() {
 
         <Route path="/review">
           <Review />
+        </Route>
+
+        <Route path="/success">
+          <Success />
         </Route>
       </div>
     </Router>

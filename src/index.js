@@ -13,6 +13,9 @@ const surveyList = (state = [], action) => {
     if (action.type === 'SET_RESPONSE') {
         return [...state,action.payload]
     }
+    if(action.type === 'EMPTY'){
+        return [];
+    }else
     return state;
 }
 
