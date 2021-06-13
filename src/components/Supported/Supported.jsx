@@ -21,7 +21,7 @@ export default function Supported() {
         } else
         //Sending info to reducer
         dispatch({
-            type: 'SET_RESPONSE',
+            type: 'SET_SUPPORTED',
             payload: responseInfo
         });
         //change location

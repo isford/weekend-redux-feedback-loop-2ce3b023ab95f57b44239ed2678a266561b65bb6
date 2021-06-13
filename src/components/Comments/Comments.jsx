@@ -16,7 +16,7 @@ export default function Comments() {
         console.log(`You're going to the next page`)
         //Sending info to reducer
         dispatch({
-            type: 'SET_RESPONSE',
+            type: 'SET_COMMENTS',
             payload: responseInfo
         });
         //Next Page

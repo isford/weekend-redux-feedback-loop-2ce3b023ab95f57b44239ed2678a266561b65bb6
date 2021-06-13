@@ -10,14 +10,29 @@ import logger from 'redux-logger';
 
 //REDUCERS TIME
 const surveyList = (state = [], action) => {
-    if (action.type === 'SET_RESPONSE') {
-        return [...state,action.payload]
-    }
-    if(action.type === 'EMPTY'){
+//     if (action.type === 'SET_RESPONSE') {
+//         return [...state,action.payload]
+//     }
+//     if(action.type === 'EMPTY'){
+//         return [];
+//     }else
+//     return state;
+// }
+
+switch(action.type){
+    case 'SET_FEELING':
+        return [...state, action.payload];
+    case 'SET_SUPPORTED':
+        return [...state, action.payload];
+    case 'SET_UNDERSTANDING':
+        return [...state, action.payload];
+    case 'SET_COMMENTS':
+        return [...state, action.payload];
+    case 'EMPTY':
         return [];
-    }else
-    return state;
-}
+    default:
+        return state;
+}}
 
 const store = createStore(
     combineReducers({

@@ -22,7 +22,7 @@ export default function Feeling() {
         }else
         //Sending info to reducer
         dispatch({
-            type: 'SET_RESPONSE',
+            type: 'SET_FEELING',
             payload: responseInfo
         });
         //navigating to next page

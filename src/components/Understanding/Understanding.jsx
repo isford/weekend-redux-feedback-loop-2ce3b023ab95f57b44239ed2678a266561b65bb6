@@ -20,7 +20,7 @@ export default function Understanding() {
         } else
         //Sending info to reducer
         dispatch({
-            type: 'SET_RESPONSE',
+            type: 'SET_UNDERSTANDING',
             payload: responseInfo
         });
         //change location
