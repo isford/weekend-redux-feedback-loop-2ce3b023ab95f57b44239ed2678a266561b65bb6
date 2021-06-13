@@ -6,9 +6,9 @@ import { useDispatch } from 'react-redux';
 export default function Comments() {
 
     const dispatch = useDispatch();
-    const [response, setResponse] = useState('');
+    const [comments, setComments] = useState('');
 
-    const responseInfo = { response: `Comments for the day: ${response}` };
+    const responseInfo = { comments: comments };
 
     let history = useHistory();
 
@@ -27,8 +27,8 @@ export default function Comments() {
         <div>
             <h1>Any comments you want to leave?</h1>
             <h5>Comments?</h5>
-            <input type = "text" placeholder = "Comments"
-                name="comments" onChange={(event) => setResponse(event.target.value)}/>
+            <input type="text" placeholder="Comments"
+                name="comments" onChange={(event) => setComments(event.target.value)} />
             <button onClick={handleClick}>Next</button>
         </div>
     )

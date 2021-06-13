@@ -14,7 +14,7 @@ export default function Review() {
             <p>STUFF TO REVIEW</p>
             <ul>
                 {surveyList.map((response, index) =>
-                <li key = {index}>{response.response}</li>
+                <li key = {index}>{response.comments}</li>
                 )}
             </ul>
             <button onClick= {handlePost}>SUBMIT IT</button>
