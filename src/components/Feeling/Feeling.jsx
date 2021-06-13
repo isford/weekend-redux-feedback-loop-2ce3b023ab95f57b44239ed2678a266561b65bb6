@@ -6,16 +6,16 @@ import {useDispatch} from 'react-redux';
 export default function Feeling() {
 
     const dispatch = useDispatch();
-    const [response, setResponse] = useState('');
+    const [feeling, setFeeling] = useState('');
 
-    const responseInfo = { response:`I am feeling like a ${response}` };
+    const responseInfo = { feeling:feeling };
 
 
 
     let history = useHistory();
 
     const handleClick = () => {
-        console.log(`You're going to the next page`, response)
+        console.log(`You're going to the next page`)
         //Sending info to reducer
         dispatch({
             type: 'SET_RESPONSE',
@@ -30,7 +30,7 @@ export default function Feeling() {
             <h1>How are you feeling today?</h1>
 
             <h5>Feeling?</h5>
-            <select name = "feeling" onChange={(event) => setResponse(event.target.value)}>
+            <select name = "feeling" onChange={(event) => setFeeling(event.target.value)}>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>

@@ -6,9 +6,9 @@ import { useDispatch } from 'react-redux';
 export default function Understanding() {
 
     const dispatch = useDispatch();
-    const [response, setResponse] = useState('');
+    const [understanding, setUnderstanding] = useState('');
 
-    const responseInfo = { response: `My understanding is a ${response}` };
+    const responseInfo = { understanding: understanding };
 
     let history = useHistory();
 
@@ -28,7 +28,7 @@ export default function Understanding() {
             <h1>How well are you understanding the material today?</h1>
 
             <h5>Understanding?</h5>
-            <select name="understanding" onChange={(event) => setResponse(event.target.value)}>
+            <select name="understanding" onChange={(event) => setUnderstanding(event.target.value)}>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>

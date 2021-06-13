@@ -6,9 +6,9 @@ import { useDispatch } from 'react-redux';
 export default function Supported() {
 
     const dispatch = useDispatch();
-    const [response, setResponse] = useState('');
+    const [support, setSupport] = useState('');
 
-    const responseInfo = { response: `My support level today is ${response}` };
+    const responseInfo = { support: support };
 
 
     let history = useHistory();
@@ -29,7 +29,7 @@ export default function Supported() {
             <h1>How supported are you feeling today?</h1>
 
             <h5>Supported?</h5>
-            <select name="supported" onChange={(event) => setResponse(event.target.value)}>
+            <select name="supported" onChange={(event) => setSupport(event.target.value)}>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>

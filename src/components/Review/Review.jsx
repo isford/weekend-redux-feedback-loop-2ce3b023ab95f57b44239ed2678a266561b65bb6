@@ -11,12 +11,18 @@ export default function Review() {
 
     return (
         <div>
-            <p>STUFF TO REVIEW</p>
-            <ul>
-                {surveyList.map((response, index) =>
-                <li key = {index}>{response.comments}</li>
+            <h1>Review Your Feedback</h1>
+
+            {surveyList.map((response, index) =>
+            <div key = {index}>
+                <p>{response.feeling}</p>
+                <p>{response.understanding}</p>
+                <p>{response.support}</p>
+                <p>{response.comments}</p>
+                
+                </div>
                 )}
-            </ul>
+            
             <button onClick= {handlePost}>SUBMIT IT</button>
         </div>
     );
