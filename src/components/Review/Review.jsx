@@ -34,12 +34,11 @@ export default function Review() {
                 <p>{response.feeling}</p>
                 <p>{response.understanding}</p>
                 <p>{response.support}</p>
-                <p>{response.comments}</p>
-                
+                <p>{response.comments}</p>               
                 </div>
                 )}
             
-            <button onClick= {handlePost}>SUBMIT IT</button>
+            <button onClick= {handlePost}>Submit</button>
         </div>
     );
    
